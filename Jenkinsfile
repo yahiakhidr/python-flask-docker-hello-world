@@ -87,7 +87,6 @@ spec:
             }
             steps {
             sh "kubectl rollout status deployment ${APP}"
-            slackSend (channel: "#${slackChannel}", color: '#4CAF50', message: "${APP}: Deployment completed <${env.BUILD_URL}|#${env.BUILD_NUMBER}>")
             }
         }
     }
