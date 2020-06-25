@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-app-service
+  namespace: default
+spec:
+  selector:
+    app: test-app
+  type: ClusterIP 
+  ports:
+  - name: node
+    port: 80
+    targetPort: 5000
+
