@@ -2,13 +2,13 @@ kind: Service
 apiVersion: v1
 metadata:
   name: test-app-service
-  namespace: default
+  namespace: mendix
 spec:
   selector:
     app: test-app
   type: ClusterIP 
   ports:
   - name: node
-    port: 80
+    port: 5000
     targetPort: 5000
 
